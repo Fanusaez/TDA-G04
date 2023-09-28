@@ -23,17 +23,17 @@ def test_ejemplo_2_tp():
     assert obtener_tiempo_minimo(s, a) == 85
 
 def test_ejemplo_catedra_3_elem():
-    s, a = obtener_tiempos_de_archivo('./textos_pruebas/3_elem.txt')
+    s, a = obtener_tiempos_de_archivo('textos_pruebas/3_elem.txt')
     assert obtener_tiempo_minimo(s, a) == 10
 
 def test_ejemplo_catedra_10_elem():
-    s, a = obtener_tiempos_de_archivo('./textos_pruebas/10_elem.txt')
+    s, a = obtener_tiempos_de_archivo('textos_pruebas/10_elem.txt')
     assert obtener_tiempo_minimo(s, a) == 29
 
 def test_ejemplo_catedra_100_elem():
-    s, a = obtener_tiempos_de_archivo('./textos_pruebas/100_elem.txt')
+    s, a = obtener_tiempos_de_archivo('textos_pruebas/100_elem.txt')
     assert obtener_tiempo_minimo(s, a) == 5223
 
 def test_ejemplo_catedra_10000_elem():
-    s, a = obtener_tiempos_de_archivo('./textos_pruebas/10000_elem.txt')
+    s, a = obtener_tiempos_de_archivo('textos_pruebas/10000_elem.txt')
     assert obtener_tiempo_minimo(s, a) == 497886735
