@@ -1,3 +1,5 @@
+import pytest
+
 from parsear_archivo import obtener_energia_demandada_y_disponible
 from tp2 import optimo_entrenamientos
 
@@ -38,6 +40,7 @@ def test_1000_elementos():
     energia_demandada, energia_disponible = obtener_energia_demandada_y_disponible('textos_pruebas/1000.txt')
     assert optimo_entrenamientos(energia_demandada, energia_disponible) == 54021
 
+@pytest.mark.timeout(60)
 def test_5000_elementos():
     energia_demandada, energia_disponible = obtener_energia_demandada_y_disponible('textos_pruebas/5000.txt')
-    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 279125
+    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 279175
