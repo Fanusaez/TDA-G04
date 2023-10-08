@@ -8,7 +8,6 @@ def obtener_columna(matriz, columna):
 def optimo_entrenamientos(energia_demandada, energia_disponible):
     """Dadas las listas de energía demandada y disponible, devuelve la máxima energía que se puede obtener entrenando"""
     matriz_optima = obtener_matriz_optima(energia_demandada, energia_disponible)
-
     return max(obtener_columna(matriz_optima, len(matriz_optima[0]) - 1))
 
 

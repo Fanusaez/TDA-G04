@@ -1,0 +1,17 @@
+\section{Introducción}
+El objetivo de este trabajo es ayudar a Scaloni a definir un plan de entrenamiento que provea la ganancia óptima.
+
+Para lograr esto, se plantea un algoritmo de programación dinámica que obtenga el máximo beneficio obtenido por los entrenamientos, teniendo en cuenta la energía disponible desde el último descanso ($s_1, s_2, ...,s_n$) y el esfuerzo/ganancía de cada día $e_i$.
+
+\subsection{Análisis del problema}
+Resolver el problema a través de programación dinámica requiere plantear un caso base y una ecuación de recurrencia.
+Primero hay que hallar sobre que variable/s se va a hacer inducción, en este caso resulta lógico hacer inducción sobre la cantidad de días $n$.
+
+Pero solo con esta variable resulta imposible poder determinar para un día $i$ el óptimo solo teniendo en cuenta el óptimo de días anteriores.
+Para poder plantear la ecuación de recurrencia, necesitamos una variable más, que por la forma en que se plantea la energía disponible, conviene que sea "días desde el último descanso"
+
+Planteamos la siguiente proposición:
+
+$P(n, d): $ Máximo beneficio en $n$ días de entrenamiento dado que el último descanso fue tomado hace $d$ días.
+
+Luego el máximo beneficio para los $n$ días de entrenamiento es $\max_{0 \leq d \leq n} P(n, d)$

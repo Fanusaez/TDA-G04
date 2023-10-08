@@ -20,7 +20,7 @@ def test_10_bis_elementos():
 
 def test_10_todo_entreno():
     energia_demandada, energia_disponible = obtener_energia_demandada_y_disponible('textos_pruebas/10_todo_entreno.txt')
-    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 900
+    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 860
 
 def test_50_elementos():
     energia_demandada, energia_disponible = obtener_energia_demandada_y_disponible('textos_pruebas/50.txt')
@@ -109,3 +109,25 @@ def test_5000_elementos_lista():
     resultados = obtener_resultado('textos_pruebas/Resultados Esperados.txt')
 
     assert obtener_lista_entrenamientos(energia_demandada, energia_disponible) == resultados['5000.txt'][1]
+
+
+def test_no_descansa():
+    energia_demandada = [75, 60, 54]
+    energia_disponible = [80, 59, 58]
+
+    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 188
+    assert obtener_lista_entrenamientos(energia_demandada, energia_disponible) == ['Entreno', 'Entreno', 'Entreno']
+
+def test_descansa_1er_dia():
+    energia_demandada = [30, 100, 50]
+    energia_disponible = [120, 69, 65]
+
+    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 150
+    assert obtener_lista_entrenamientos(energia_demandada, energia_disponible) == ['Descanso', 'Entreno', 'Entreno']
+
+def test_descansa_2do_dia():
+    energia_demandada = [50, 20, 65]
+    energia_disponible = [60, 10, 5]
+
+    assert optimo_entrenamientos(energia_demandada, energia_disponible) == 110
+    assert obtener_lista_entrenamientos(energia_demandada, energia_disponible) == ['Entreno', 'Descanso', 'Entreno']
