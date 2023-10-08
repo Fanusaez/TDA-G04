@@ -15,13 +15,4 @@ Para ejecutar el programa con un archivo de prueba, ejecutar el siguiente comand
 
 ```python main.py <<path>>``` 
 
-El archivo deberá tener formato:
-
-S_i,A_i
-
-3,3
-
-5,1
-
-1,8
-
+El archivo deberá tener formato de la cátedra.
