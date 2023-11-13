@@ -26,15 +26,18 @@ def test_ejemplo_10_todos():
     assert hitting_set(universo, subconjunto, k) == ['Dibu', 'Cuti', 'Molina', 'Guido Rodriguez', 'Paredes',
                                                      'Palacios', 'Messi', 'Garnacho', 'Lautaro', 'Perrone']
 
+
 def test_ejemplo_10_varios():
     universo, subconjunto = parsear_archivo('TP3/10_varios.txt')
     k = 6
     assert hitting_set(universo, subconjunto, k) == ['Palermo', 'Dibu', 'Beltran', 'Riquelme', 'Dybala', 'Di Maria']
 
+
 def test_ejemplo_15():
     universo, subconjunto = parsear_archivo('TP3/15.txt')
     k = 4
     assert hitting_set(universo, subconjunto, k) == ['Chiquito Romero', 'Palermo', 'Luka Romero', 'Dybala']
+
 
 def test_ejemplo_20():
     universo, subconjunto = parsear_archivo('TP3/20.txt')
@@ -42,7 +45,30 @@ def test_ejemplo_20():
     assert hitting_set(universo, subconjunto, k) == ["Barcon't", 'Riquelme', 'El fantasma de la B',
                                                      'Mauro Zarate', 'Ogro Fabianni']
 
+
 def test_ejemplo_50():
     universo, subconjunto = parsear_archivo('TP3/50.txt')
-    k = 10
+    k = 6
     assert hitting_set(universo, subconjunto, k) == ["Casco", "Barcon't", "Tucu Pereyra", "Dybala", "Armani", "Langoni"]
+
+
+def test_ejemplo_75():
+    universo, subconjunto = parsear_archivo('TP3/75.txt')
+    k = 8
+    assert hitting_set(universo, subconjunto, k) == ['Simeone', 'Riquelme', 'Casco', 'Palermo', 'Chiquito Romero',
+                                                     'Ogro Fabianni', 'Cuti Romero', 'Beltran']
+
+
+def test_ejemplo_100():
+    universo, subconjunto = parsear_archivo('TP3/100.txt')
+    k = 9
+    assert hitting_set(universo, subconjunto, k) == ["Barcon't", 'Armani', 'Gallardo', 'Langoni', 'El fantasma de la B', 'Soule',
+                                                     'Wachoffisde Abila', 'Messi', 'Changuito Zeballos']
+
+
+def test_ejemplo_200():
+    universo, subconjunto = parsear_archivo('TP3/200.txt')
+    k = 9
+    assert hitting_set(universo, subconjunto, k) == ['Mauro Zarate', 'Tucu Pereyra', 'Beltran', 'Gallardo', 'Pity Martinez',
+                                                     "Barcon't", 'Palermo', 'Soule', 'Chiquito Romero']
+
