@@ -1,15 +1,6 @@
 from parser_casos import parsear_archivo
+from hitting_set import es_solucion
 
-def es_solucion(subconjuntos, asignacion_actual):
-    for subconjunto in subconjuntos:
-        contiene_elemento = False
-        for elemento in subconjunto:
-            if elemento in asignacion_actual:
-                contiene_elemento = True
-                break
-        if not contiene_elemento:
-            return False
-    return True
 
 def contar_apariciones(subconjuntos, apariciones):
     for subconjunto in subconjuntos:
@@ -32,14 +23,25 @@ def eliminar_subconjuntos_con_jugador(subconjuntos, jugador):
 
 
 def hitting_set_greedy(subconjuntos):
+    # Lista para la asignacion final
     asignacion = []
+
+    # Diccionario para contar las apariciones de cada jugador
     apariciones = {}
+
     while not es_solucion(subconjuntos, asignacion):
         apariciones = contar_apariciones(subconjuntos, apariciones)
+
+        # Ordena el diccionario de apariciones de forma descendente
         apariciones_ordenado = dict(sorted(apariciones.items(), key=lambda item: item[1], reverse=True))
+
+        # Agrega el jugador más frecuente a la asignación
         asignacion.append(next(iter(apariciones_ordenado)))
+
         if es_solucion(subconjuntos, asignacion):
             return asignacion
+
+        # Elimina los subconjuntos que contienen al último jugador agregado
         subconjuntos = eliminar_subconjuntos_con_jugador(subconjuntos, asignacion[-1])
 
     return asignacion
