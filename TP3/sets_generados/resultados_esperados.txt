@@ -4,3 +4,14 @@ Cantidad mínima: 5 ["Barcon't", "Colo Barco", "Wachoffisde Abila", "Messi", "Cu
 5_unico.txt
 Cantidad minima: 1 ["Messi"]
 
+10_pocos.txt
+Cantidad minima: 2 ["Messi", "Di Maria"]
+
+10_unico.txt
+Cantidad minima: 1 ["Dibu"]
+
+10_varios.txt
+Cantidad minima: 6 ['Di Maria', 'Colo Barco', 'Tagliafico', 'Martinez', 'Alvarez', 'Perez']
+
+15.txt
+Cantidad minima: 3 ["Alvarez", "Fernandez",  "Dibu"]

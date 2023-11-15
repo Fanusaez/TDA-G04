@@ -1,0 +1,10 @@
+Messi,Di Maria
+Colo Barco,Dybala,Messi,Romero
+Di Maria,Wanchope,Aguero,Montiel
+Tagliafico,Armani,Foyth,Pezzella,Di Maria
+Romero,Otamendi,Paredes,Palacios,Di Maria
+Messi,Martinez,De Paul,Rodriguez,Mac Allister
+Alvarez,Di Maria,Correa,Scaloni,Garay
+Perez,Zabaleta,Campagnaro,Messi,Gago
+Biglia,Di Maria,Higuain,Rodriguez,Orion
+Di Maria,Messi,Aguero,Dybala,Mascherano
