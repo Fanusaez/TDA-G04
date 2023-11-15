@@ -31,14 +31,14 @@ def eliminar_subconjuntos_con_jugador(subconjuntos, jugador):
     return nuevo_subconjunto
 
 
-def hitting_set_greedy(universo, subconjuntos, k):
+def hitting_set_greedy(subconjuntos):
     asignacion = []
     apariciones = {}
-    while not es_solucion(subconjuntos, asignacion) and k > len(asignacion):
+    while not es_solucion(subconjuntos, asignacion):
         apariciones = contar_apariciones(subconjuntos, apariciones)
         apariciones_ordenado = dict(sorted(apariciones.items(), key=lambda item: item[1], reverse=True))
         asignacion.append(next(iter(apariciones_ordenado)))
-        if es_solucion(subconjuntos, asignacion) and len(asignacion) <= k:
+        if es_solucion(subconjuntos, asignacion):
             return asignacion
         subconjuntos = eliminar_subconjuntos_con_jugador(subconjuntos, asignacion[-1])
 
