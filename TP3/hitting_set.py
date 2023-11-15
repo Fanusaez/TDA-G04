@@ -13,8 +13,8 @@ def es_solucion(subconjuntos, asignacion_actual):
     return True
 
 
-def _hitting_set(universo, subconjuntos, k, indice_elemento, asignacion_actual, mejor_asignacion):
-    if len(asignacion_actual) > k or (mejor_asignacion and len(asignacion_actual) > len(mejor_asignacion)):
+def _hitting_set(universo, subconjuntos, indice_elemento, asignacion_actual, mejor_asignacion):
+    if mejor_asignacion and len(asignacion_actual) > len(mejor_asignacion):
         return mejor_asignacion
 
     if es_solucion(subconjuntos, asignacion_actual):
@@ -24,14 +24,14 @@ def _hitting_set(universo, subconjuntos, k, indice_elemento, asignacion_actual, 
         return mejor_asignacion
 
     # Llamada recursiva con asignacion_actual actualizada
-    resultado = _hitting_set(universo, subconjuntos, k, indice_elemento + 1, asignacion_actual + [universo[indice_elemento]], mejor_asignacion)
+    resultado = _hitting_set(universo, subconjuntos, indice_elemento + 1, asignacion_actual + [universo[indice_elemento]], mejor_asignacion)
 
     # Actualización de mejor_asignacion
     if not mejor_asignacion or len(resultado) < len(mejor_asignacion):
         mejor_asignacion = resultado
 
     # Llamada recursiva sin modificar asignacion_actual
-    resultado = _hitting_set(universo, subconjuntos, k, indice_elemento + 1, asignacion_actual, mejor_asignacion)
+    resultado = _hitting_set(universo, subconjuntos, indice_elemento + 1, asignacion_actual, mejor_asignacion)
 
     # Actualización de mejor_asignacion
     if resultado and (not mejor_asignacion or len(resultado) < len(mejor_asignacion)):
@@ -39,6 +39,7 @@ def _hitting_set(universo, subconjuntos, k, indice_elemento, asignacion_actual, 
 
     return mejor_asignacion
 
-def hitting_set(universo, subconjuntos, k):
-    return _hitting_set(universo, subconjuntos, k, 0, [], [])
+
+def hitting_set(universo, subconjuntos):
+    return _hitting_set(universo, subconjuntos, 0, [], [])
 

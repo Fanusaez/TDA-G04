@@ -1,0 +1,6 @@
+5_todos.txt
+Cantidad mínima: 5 ["Barcon't", "Colo Barco", "Wachoffisde Abila", "Messi", "Cuti Romero"]
+
+5_unico.txt
+Cantidad minima: 1 ["Messi"]
+
