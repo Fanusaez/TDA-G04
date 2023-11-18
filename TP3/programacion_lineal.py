@@ -65,7 +65,7 @@ b como la cantidad de aquel conjunto entre los diferentes conjuntos (pedidos de 
         print("Solucion previo al redondeo:")
         for v in prob.variables():
             print(v.name, "=", v.varValue)
-        print("")
+        print("b = ", b)
 
         # Devuelve los elementos seleccionados para el hitting set
         return [i for i in universo if x_vars[i].value() >= 1/b]
@@ -75,9 +75,10 @@ b como la cantidad de aquel conjunto entre los diferentes conjuntos (pedidos de 
 
 
 def main():
-    universo, subconjunto = parsear_archivo('TP3/200.txt')
+    universo, subconjunto = parsear_archivo('TP3/100.txt')
     solucion = hitting_set_aproximado(universo, subconjunto)
     print(solucion)
+    print("k = ", len(solucion))
 
 if __name__ == '__main__':
     main()
