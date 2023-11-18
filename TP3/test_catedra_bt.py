@@ -58,7 +58,6 @@ def test_ejemplo_100():
 
 def test_ejemplo_200():
     universo, subconjunto = parsear_archivo('TP3/200.txt')
-    k = 9
     assert hitting_set(universo, subconjunto) == ['Mauro Zarate', 'Tucu Pereyra', 'Beltran', 'Gallardo', 'Pity Martinez',
                                                      "Barcon't", 'Palermo', 'Soule', 'Chiquito Romero']
 

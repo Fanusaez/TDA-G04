@@ -30,7 +30,7 @@ def hitting_set_greedy(subconjuntos):
     apariciones = {}
 
     while not es_solucion(subconjuntos, asignacion):
-        apariciones = contar_apariciones(subconjuntos, apariciones)
+        apariciones = contar_apariciones(subconjuntos, {})
 
         # Ordena el diccionario de apariciones de forma descendente
         apariciones_ordenado = dict(sorted(apariciones.items(), key=lambda item: item[1], reverse=True))
@@ -46,3 +46,6 @@ def hitting_set_greedy(subconjuntos):
 
     return asignacion
 
+
+_, subconjunto = parsear_archivo('TP3/10_varios.txt')
+hitting_set_greedy(subconjunto)
