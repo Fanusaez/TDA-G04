@@ -26,9 +26,6 @@ def hitting_set_greedy(subconjuntos):
     # Lista para la asignacion final
     asignacion = []
 
-    # Diccionario para contar las apariciones de cada jugador
-    apariciones = {}
-
     while not es_solucion(subconjuntos, asignacion):
         apariciones = contar_apariciones(subconjuntos, {})
 
