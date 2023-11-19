@@ -45,7 +45,3 @@ def hitting_set_greedy(subconjuntos):
         subconjuntos = eliminar_subconjuntos_con_jugador(subconjuntos, asignacion[-1])
 
     return asignacion
-
-
-_, subconjunto = parsear_archivo('TP3/10_varios.txt')
-hitting_set_greedy(subconjunto)

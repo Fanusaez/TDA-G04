@@ -1,5 +1,5 @@
-from TP3.hitting_set_greedy import hitting_set_greedy
-from TP3.parser_casos import parsear_archivo
+from hitting_set_greedy import hitting_set_greedy
+from parser_casos import parsear_archivo
 
 
 def test_ejemplo_5():

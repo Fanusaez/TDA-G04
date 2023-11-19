@@ -18,7 +18,10 @@ def _hitting_set(universo, subconjuntos, indice_elemento, asignacion_actual, mej
         return mejor_asignacion
 
     if es_solucion(subconjuntos, asignacion_actual):
-        return asignacion_actual if not mejor_asignacion or len(asignacion_actual) < len(mejor_asignacion) else mejor_asignacion
+        if not mejor_asignacion or len(asignacion_actual) < len(mejor_asignacion):
+            return asignacion_actual
+        else:
+            return mejor_asignacion
 
     if indice_elemento >= len(universo):
         return mejor_asignacion

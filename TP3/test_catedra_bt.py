@@ -20,12 +20,13 @@ def test_ejemplo_10_pocos():
 def test_ejemplo_10_todos():
     universo, subconjunto = parsear_archivo('TP3/10_todos.txt')
     assert hitting_set(universo, subconjunto) == ['Dibu', 'Cuti', 'Molina', 'Guido Rodriguez', 'Paredes',
-                                                     'Palacios', 'Messi', 'Garnacho', 'Lautaro', 'Perrone']
+                                                  'Palacios', 'Messi', 'Garnacho', 'Lautaro', 'Perrone']
 
 
 def test_ejemplo_10_varios():
     universo, subconjunto = parsear_archivo('TP3/10_varios.txt')
-    assert hitting_set(universo, subconjunto) == ['Palermo', 'Dibu', 'Beltran', 'Riquelme', 'Dybala', 'Di Maria']
+    assert hitting_set(universo, subconjunto) == ['Palermo', 'Dibu', 'Beltran', 'Riquelme', 'Dybala',
+                                                  'Di Maria']
 
 
 def test_ejemplo_15():
@@ -41,23 +42,24 @@ def test_ejemplo_20():
 
 def test_ejemplo_50():
     universo, subconjunto = parsear_archivo('TP3/50.txt')
-    assert hitting_set(universo, subconjunto) == ["Casco", "Barcon't", "Tucu Pereyra", "Dybala", "Armani", "Langoni"]
+    assert hitting_set(universo, subconjunto) == ["Casco", "Barcon't", "Tucu Pereyra",
+                                                  "Dybala", "Armani", "Langoni"]
 
 
 def test_ejemplo_75():
     universo, subconjunto = parsear_archivo('TP3/75.txt')
     assert hitting_set(universo, subconjunto) == ['Simeone', 'Riquelme', 'Casco', 'Palermo', 'Chiquito Romero',
-                                                     'Ogro Fabianni', 'Cuti Romero', 'Beltran']
+                                                  'Ogro Fabianni', 'Cuti Romero', 'Beltran']
 
 
 def test_ejemplo_100():
     universo, subconjunto = parsear_archivo('TP3/100.txt')
-    assert hitting_set(universo, subconjunto) == ["Barcon't", 'Armani', 'Gallardo', 'Langoni', 'El fantasma de la B', 'Soule',
-                                                     'Wachoffisde Abila', 'Messi', 'Changuito Zeballos']
+    assert hitting_set(universo, subconjunto) == ["Barcon't", 'Armani', 'Gallardo', 'Langoni', 'El fantasma de la B',
+                                                  'Soule', 'Wachoffisde Abila', 'Messi', 'Changuito Zeballos']
 
 
 def test_ejemplo_200():
     universo, subconjunto = parsear_archivo('TP3/200.txt')
     assert hitting_set(universo, subconjunto) == ['Mauro Zarate', 'Tucu Pereyra', 'Beltran', 'Gallardo', 'Pity Martinez',
-                                                     "Barcon't", 'Palermo', 'Soule', 'Chiquito Romero']
+                                                  "Barcon't", 'Palermo', 'Soule', 'Chiquito Romero']
 

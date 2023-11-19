@@ -1,0 +1,20 @@
+Alvarez,Fernandez,Dibu,Palacios
+Acuna,Tagliafico,Rulli,Alvarez
+Alvarez,Foyth,Pezzella,Romero
+Montiel,Dibu,Alvarez,Correa,Rulli
+Romero,Fernandez,Otamendi,Palacios
+Otamendi,Dibu,Acuna,Messi,Di Maria
+Alvarez,Palacios,Correa,Dybala
+Romero,Fernandez,Martinez,Correa,Acuna
+Scalonim,Dibu,Alvarez,Almada,Palacios
+Fernandez,Messi,Di Maria,Mac Allister
+Dibu,Palacios,Molina,Otamendi,Fernandez
+Acuna,Tagliafico,Rulli,Alvarez,Rodriguez
+Alvarez,Foyth,Pezzella,Romero,Scaloni
+Montiel,Dibu,Alvarez,Correa,Messi
+Romero,Fernandez,Otamendi,Palacios,Mac Callister
+Palacios,Tagliafico,Dibu,Alvarez,Correa
+Fernandez,Messi,Martinez,Tagliafico,Rulli
+Alvarez,Di Maria,Acuna,Palacios,Messi
+Dibu,Tagliafico,Martinez,Otamendi,Alvarez
+Palacios,Tagliafico,Correa

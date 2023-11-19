@@ -24,8 +24,16 @@ def test_ejemplo_10_pocos():
 
 def test_ejemplo_10_varios():
     universo, subconjunto = parsear_archivo('sets_generados/10_varios.txt')
-    assert hitting_set(universo, subconjunto) == ['Di Maria', 'Colo Barco', 'Tagliafico', 'Martinez', 'Alvarez', 'Perez']
+    assert hitting_set(universo, subconjunto) == ['Di Maria', 'Colo Barco', 'Tagliafico',
+                                                  'Martinez', 'Alvarez', 'Perez']
+
 
 def test_ejemplo_15():
     universo, subconjunto = parsear_archivo('sets_generados/15.txt')
     assert hitting_set(universo, subconjunto) == ["Alvarez", "Fernandez",  "Dibu"]
+
+
+def test_ejemplo_20():
+    universo, subconjunto = parsear_archivo('sets_generados/20.txt')
+    assert hitting_set(universo, subconjunto) == ["Alvarez", "Fernandez", "Dibu", "Palacios"]
+

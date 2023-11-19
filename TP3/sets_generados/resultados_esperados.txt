@@ -15,3 +15,6 @@ Cantidad minima: 6 ['Di Maria', 'Colo Barco', 'Tagliafico', 'Martinez', 'Alvarez
 
 15.txt
 Cantidad minima: 3 ["Alvarez", "Fernandez",  "Dibu"]
+
+20.txt
+Cantidad minima: 4 ["Alvarez", "Fernandez",  "Dibu", "Palacios"]
