@@ -1,22 +1,72 @@
-from programacion_lineal import hitting_set
 from parser_casos import parsear_archivo
+from programacion_lineal import hitting_set
+from hitting_set import es_solucion
 
 def test_ejemplo_5():
     universo, subconjunto = parsear_archivo('TP3/5.txt')
-    assert hitting_set(universo, subconjunto) == ["Barcon't", "Messi"]
-
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 2
 
 def test_ejemplo_7():
     universo, subconjunto = parsear_archivo('TP3/7.txt')
-    assert hitting_set(universo, subconjunto) == ["Mauro Zarate", "Pezzella"]
-
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 2
 
 def test_ejemplo_10_pocos():
     universo, subconjunto = parsear_archivo('TP3/10_pocos.txt')
-    assert hitting_set(universo, subconjunto) == ["Chiquito Romero", "Di Maria", "Casco"]
-
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 3
 
 def test_ejemplo_10_todos():
     universo, subconjunto = parsear_archivo('TP3/10_todos.txt')
-    assert len(hitting_set(universo, subconjunto)) == len(['Dibu', 'Cuti', 'Molina', 'Guido Rodriguez', 'Paredes',
-                                                     'Palacios', 'Messi', 'Garnacho', 'Lautaro', 'Perrone'])
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 10
+
+def test_ejemplo_10_varios():
+    universo, subconjunto = parsear_archivo('TP3/10_varios.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 6
+
+def test_ejemplo_15():
+    universo, subconjunto = parsear_archivo('TP3/15.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 4
+
+def test_ejemplo_20():
+    universo, subconjunto = parsear_archivo('TP3/20.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 5
+
+def test_ejemplo_50():
+    universo, subconjunto = parsear_archivo('TP3/50.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 6
+
+
+def test_ejemplo_75():
+    universo, subconjunto = parsear_archivo('TP3/75.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 8
+
+
+def test_ejemplo_100():
+    universo, subconjunto = parsear_archivo('TP3/100.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 9
+
+
+def test_ejemplo_200():
+    universo, subconjunto = parsear_archivo('TP3/200.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
+    assert len(solucion) == 9

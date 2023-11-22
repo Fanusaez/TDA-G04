@@ -22,7 +22,7 @@ def eliminar_subconjuntos_con_jugador(subconjuntos, jugador):
     return nuevo_subconjunto
 
 
-def hitting_set_greedy(subconjuntos):
+def hitting_set_greedy(universo, subconjuntos):
     # Lista para la asignacion final
     asignacion = []
 
