@@ -14,9 +14,11 @@ def es_solucion(subconjuntos, asignacion_actual):
 
 
 def _hitting_set(universo, subconjuntos, indice_elemento, asignacion_actual, mejor_asignacion):
+    # Poda, si la asignacion actual es peor que la mejor asignacion, no sigo
     if mejor_asignacion and len(asignacion_actual) > len(mejor_asignacion):
         return mejor_asignacion
 
+    # Devuelvo mejor solcion hasta el momento si es que la asignacion actual es solucion
     if es_solucion(subconjuntos, asignacion_actual):
         if not mejor_asignacion or len(asignacion_actual) < len(mejor_asignacion):
             return asignacion_actual

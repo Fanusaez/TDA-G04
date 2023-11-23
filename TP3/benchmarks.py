@@ -24,7 +24,7 @@ def benchmark_algoritmos():
 
     # Algoritmos a probar
     algoritmos = [
-        # hitting_set_backtracking,
+        hitting_set_backtracking,
         hitting_set_programacion_lineal_entera,
         hitting_set_programacion_lineal_continua,
         hitting_set_greedy,
@@ -33,7 +33,7 @@ def benchmark_algoritmos():
     # Ejecuta los algoritmos para cada archivo
     for archivo in archivos:
         print("Archivo:", archivo)
-        print("lineal_entera | lineal_continua | greedy")
+        print("back_tracking | lineal_entera | lineal_continua | greedy")
         universo, subconjuntos = parsear_archivo("TP3/" + archivo)
 
         # Inicia la medición de tiempos para cada algoritmo
