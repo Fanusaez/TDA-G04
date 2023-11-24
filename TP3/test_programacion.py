@@ -70,3 +70,49 @@ def test_ejemplo_200():
     solucion = hitting_set(universo, subconjunto)
     assert es_solucion(subconjunto, hitting_set(universo, subconjunto))
     assert len(solucion) == 9
+
+
+def test_ejemplo_5_unico():
+    universo, subconjunto = parsear_archivo('sets_generados/5_unico.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 1
+
+
+def test_ejemplo_5_todos():
+    universo, subconjunto = parsear_archivo('sets_generados/5_todos.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 5
+
+def test_ejemplo_10_unico():
+    universo, subconjunto = parsear_archivo('sets_generados/10_unico.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 1
+
+
+def test_ejemplo_10_pocos():
+    universo, subconjunto = parsear_archivo('sets_generados/10_pocos.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 2
+
+def test_ejemplo_10_varios():
+    universo, subconjunto = parsear_archivo('sets_generados/10_varios.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 6
+
+def test_ejemplo_15():
+    universo, subconjunto = parsear_archivo('sets_generados/15.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 3
+
+
+def test_ejemplo_20():
+    universo, subconjunto = parsear_archivo('sets_generados/20.txt')
+    solucion = hitting_set(universo, subconjunto)
+    assert es_solucion(subconjunto, solucion)
+    assert len(solucion) == 4
