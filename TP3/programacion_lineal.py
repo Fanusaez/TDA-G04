@@ -29,13 +29,6 @@ def hitting_set(universo, subconjuntos):
 
 def hitting_set_aproximado(universo, subconjuntos):
     """
-    permitiendo que las variables de decisión sean valores reales, y luego redondear el resultado final del modelo. Para redondear, obtenemos el valor
-�
-b como la cantidad de aquel conjunto entre los diferentes conjuntos (pedidos de la prensa) que tenga la mayor cantidad de jugadores, y definimos que la variables de decisión de cada jugador serán 1 si su valor en el modelo relajado es mayor o igual a
-1
-/
-�
-1/b.
     """
     # Hago que no se impriman los mensajes de pulp
     prob = LpProblem("HittingSet", LpMinimize)
@@ -54,15 +47,15 @@ b como la cantidad de aquel conjunto entre los diferentes conjuntos (pedidos de 
     # Resolver el problema
     prob.solve(PULP_CBC_CMD(msg=False))
 
-
-
     #print("Status:", LpStatus[prob.status])
     #print("")
     #print("Solucion:")
     #for v in prob.variables():
     #   print(v.name, "=", v.varValue)
+    variables_resultado = [v.varValue for v in prob.variables()]
+    return variables_resultado
 
-    b = max([len(subset) for subset in subconjuntos])
+    b = obtener_b(subconjuntos)
     if LpStatus[prob.status] == 'Optimal':
         # Imprimo la solucion previo al redondeo
         #print("Solucion previo al redondeo:")
@@ -75,6 +68,10 @@ b como la cantidad de aquel conjunto entre los diferentes conjuntos (pedidos de 
 
     # Aca deberia devolver el universo
     return None
+
+
+def obtener_b(subconjuntos):
+    return max([len(subset) for subset in subconjuntos])
 
 
 def main():
