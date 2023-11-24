@@ -52,9 +52,6 @@ def hitting_set_aproximado(universo, subconjuntos):
     #print("Solucion:")
     #for v in prob.variables():
     #   print(v.name, "=", v.varValue)
-    variables_resultado = [v.varValue for v in prob.variables()]
-    return variables_resultado
-
     b = obtener_b(subconjuntos)
     if LpStatus[prob.status] == 'Optimal':
         # Imprimo la solucion previo al redondeo
