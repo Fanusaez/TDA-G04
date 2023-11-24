@@ -9,7 +9,7 @@ def test_5_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 def test_7_cota_pl_aproximado():
     universo, subconjunto = parsear_archivo('TP3/7.txt')
@@ -18,7 +18,7 @@ def test_7_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 def test_15_cota_pl_aproximado():
     universo, subconjunto = parsear_archivo('TP3/15.txt')
@@ -27,7 +27,7 @@ def test_15_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 def test_20_cota_pl_aproximado():
     universo, subconjunto = parsear_archivo('TP3/20.txt')
@@ -36,7 +36,7 @@ def test_20_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 def test_50_cota_pl_aproximado():
     universo, subconjunto = parsear_archivo('TP3/50.txt')
@@ -45,7 +45,7 @@ def test_50_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 def test_75_cota_pl_aproximado():
     universo, subconjunto = parsear_archivo('TP3/75.txt')
@@ -54,7 +54,7 @@ def test_75_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 def test_100_cota_pl_aproximado():
     universo, subconjunto = parsear_archivo('TP3/100.txt')
@@ -63,7 +63,7 @@ def test_100_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 
 def test_200_cota_pl_aproximado():
@@ -73,6 +73,14 @@ def test_200_cota_pl_aproximado():
     z_i = len(hitting_set(universo, subconjunto))
     ratio = a_i / z_i
     print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
-    assert len(hitting_set(universo, subconjunto)) / len(hitting_set_aproximado(universo, subconjunto)) <= b
+    assert ratio <= b
 
 
+def test_300_cota_pl_aproximado():
+    universo, subconjunto = parsear_archivo('sets_randomizados_volumen/300.txt')
+    b = obtener_b(subconjunto)
+    a_i = len(hitting_set_aproximado(universo, subconjunto))
+    z_i = len(hitting_set(universo, subconjunto))
+    ratio = a_i / z_i
+    print(f"A(I): {a_i}, z(i): {z_i}, ratio: {ratio}, b:{b}")
+    assert ratio <= b
