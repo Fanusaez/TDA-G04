@@ -3,7 +3,7 @@ from programacion_lineal import obtener_b, hitting_set, hitting_set_aproximado
 
 
 def test_5_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/5.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/5.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -12,7 +12,7 @@ def test_5_cota_pl_aproximado():
     assert ratio <= b
 
 def test_7_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/7.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/7.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -21,7 +21,7 @@ def test_7_cota_pl_aproximado():
     assert ratio <= b
 
 def test_15_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/15.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/15.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -30,7 +30,7 @@ def test_15_cota_pl_aproximado():
     assert ratio <= b
 
 def test_20_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/20.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/20.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -39,7 +39,7 @@ def test_20_cota_pl_aproximado():
     assert ratio <= b
 
 def test_50_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/50.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/50.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -48,7 +48,7 @@ def test_50_cota_pl_aproximado():
     assert ratio <= b
 
 def test_75_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/75.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/75.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -57,7 +57,7 @@ def test_75_cota_pl_aproximado():
     assert ratio <= b
 
 def test_100_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/100.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/100.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))
@@ -67,7 +67,7 @@ def test_100_cota_pl_aproximado():
 
 
 def test_200_cota_pl_aproximado():
-    universo, subconjunto = parsear_archivo('TP3/200.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/200.txt')
     b = obtener_b(subconjunto)
     a_i = len(hitting_set_aproximado(universo, subconjunto))
     z_i = len(hitting_set(universo, subconjunto))

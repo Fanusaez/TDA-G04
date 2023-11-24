@@ -34,7 +34,7 @@ def benchmark_algoritmos():
     for archivo in archivos:
         print("Archivo:", archivo)
         print("back_tracking | lineal_entera | lineal_continua | greedy")
-        universo, subconjuntos = parsear_archivo("TP3/" + archivo)
+        universo, subconjuntos = parsear_archivo("sets-catedra/" + archivo)
 
         # Inicia la medición de tiempos para cada algoritmo
         tiempos = []

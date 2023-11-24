@@ -72,7 +72,7 @@ def obtener_b(subconjuntos):
 
 
 def main():
-    universo, subconjunto = parsear_archivo('TP3/100.txt')
+    universo, subconjunto = parsear_archivo('sets-catedra/100.txt')
     solucion = hitting_set_aproximado(universo, subconjunto)
     #print(solucion)
     #print("k = ", len(solucion))
